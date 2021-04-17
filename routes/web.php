@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('/cv', 'HomeController@index')->name('cv-saya');
 Route::get('/about', 'HomeController@about')->name('tentang');
+
+// route untuk tabel course
+Route::get('/kursus', 'CourseController@index')->name('course.index');
