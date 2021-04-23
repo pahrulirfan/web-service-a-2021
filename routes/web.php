@@ -20,7 +20,9 @@ Route::get('/about', 'HomeController@about')->name('tentang');
 
 // route untuk tabel course menggunakan method resource
 Route::resource('course', 'CourseController');
-// route untuk tabel course
+// route untuk mengambil data dari tabel course
 Route::get('/kursus', 'CourseController@index')->name('course.index');
+// route untuk membuka form input course
 Route::get('/kursus/create', 'CourseController@create')->name('course.create');
+// route untuk menyimpan data course
 Route::post('/kursus/store', 'CourseController@store')->name('course.store');
