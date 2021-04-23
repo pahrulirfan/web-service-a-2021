@@ -6,6 +6,7 @@
         </div>
         <div class="card text-left">
             <div class="card-body">
+                <a href="{{ route('course.create') }}" class="btn btn-primary">Create New Course</a> <br> <br>
                 <table class="table-bordered table">
                     <thead>
                     <tr>
