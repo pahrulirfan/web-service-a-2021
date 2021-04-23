@@ -18,5 +18,9 @@ Route::get('/', function () {
 Route::get('/cv', 'HomeController@index')->name('cv-saya');
 Route::get('/about', 'HomeController@about')->name('tentang');
 
+// route untuk tabel course menggunakan method resource
+Route::resource('course', 'CourseController');
 // route untuk tabel course
 Route::get('/kursus', 'CourseController@index')->name('course.index');
+Route::get('/kursus/create', 'CourseController@create')->name('course.create');
+Route::post('/kursus/store', 'CourseController@store')->name('course.store');
