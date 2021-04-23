@@ -28,7 +28,12 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // untuk cek input apakah sudah masuk ke server
+        // dd($request->all());
+
+        // method create untuk mass assigment dari laravel menggunakan nama modelnya
+        Course::create($request->all());
+        return redirect()->route('course.index');
     }
 
     /**
