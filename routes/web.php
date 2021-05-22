@@ -26,3 +26,6 @@ Route::get('/kursus', 'CourseController@index')->name('course.index');
 Route::get('/kursus/create', 'CourseController@create')->name('course.create');
 // route untuk menyimpan data course
 Route::post('/kursus/store', 'CourseController@store')->name('course.store');
+
+// route untuk institusi
+Route::get('/lembaga', 'InstitutionController@index');

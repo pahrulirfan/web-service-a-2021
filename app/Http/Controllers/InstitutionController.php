@@ -2,23 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Course;
+
+use App\Institution;
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class InstitutionController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        // select * from course
-//        $courses = Course::all();
-        $courses = Course::with('lembaga')->get();
-//        dd($courses);
-        return view('course.index', compact('courses'));
+        $data = Institution::all();
+        return view('lembaga.index', compact('data'));
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        return view('course.create');
+        //
     }
 
     /**
@@ -29,21 +37,16 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        // untuk cek input apakah sudah masuk ke server
-        // dd($request->all());
-
-        // method create untuk mass assigment dari laravel menggunakan nama modelnya
-        Course::create($request->all());
-        return redirect()->route('course.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Course $course
+     * @param \App\Institution $institution
      * @return \Illuminate\Http\Response
      */
-    public function show(Course $course)
+    public function show(Institution $institution)
     {
         //
     }
@@ -51,10 +54,10 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Course $course
+     * @param \App\Institution $institution
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
+    public function edit(Institution $institution)
     {
         //
     }
@@ -63,10 +66,10 @@ class CourseController extends Controller
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \App\Course $course
+     * @param \App\Institution $institution
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, Institution $institution)
     {
         //
     }
@@ -74,10 +77,10 @@ class CourseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Course $course
+     * @param \App\Institution $institution
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function destroy(Institution $institution)
     {
         //
     }

@@ -13,6 +13,8 @@
                         <th>No</th>
                         <th>Name</th>
                         <th>Description</th>
+                        <th>Lembaga</th>
+                        <th>Keterangan</th>
                         <th>Aksi</th>
                     </tr>
                     </thead>
@@ -22,6 +24,8 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $course->name }}</td>
                             <td>{{ $course->description }}</td>
+                            <td>{{ $course->lembaga->name }}</td>
+                            <td>{{ $course->lembaga->description }}</td>
                             <td>Edit | Hapus</td>
                         </tr>
                     @endforeach
