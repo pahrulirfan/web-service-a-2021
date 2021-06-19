@@ -15,3 +15,6 @@ Route::delete('kursus/{data}', 'API\CourseController@destroy');
 
 // Route Tambah Data
 Route::post('kursus', 'API\CourseController@store');
+
+// Route Update Data
+Route::patch('kursus/{id}', 'API\CourseController@update');
